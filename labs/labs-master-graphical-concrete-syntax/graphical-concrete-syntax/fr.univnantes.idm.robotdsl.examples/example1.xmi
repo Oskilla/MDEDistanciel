@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robotdsl:RobotSimulation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:robotdsl="http://www.example.org/robotdsl" xsi:schemaLocation="http://www.example.org/robotdsl ../fr.univnantes.idm.robotdsl.abstractsyntax/model/robotdsl.ecore" name="mysim">
+  <robots name="MyFancyRobot">
+    <components xsi:type="robotdsl:Light" name="l1"/>
+    <components xsi:type="robotdsl:Motor" name="m1" power="500" poweredWheels="//@robots.0/@components.2 //@robots.0/@components.3"/>
+    <components xsi:type="robotdsl:Wheel" name="w1" motor="//@robots.0/@components.1"/>
+    <components xsi:type="robotdsl:Wheel" name="w2" motor="//@robots.0/@components.1"/>
+    <components xsi:type="robotdsl:Motor" name="m3" power="500" poweredWheels="//@robots.0/@components.5 //@robots.0/@components.7"/>
+    <components xsi:type="robotdsl:Wheel" name="m3" motor="//@robots.0/@components.4"/>
+    <components xsi:type="robotdsl:Light" name="l2"/>
+    <components xsi:type="robotdsl:Wheel" name="w4" motor="//@robots.0/@components.4"/>
+  </robots>
+  <robots name="SimplerRobot">
+    <components xsi:type="robotdsl:Motor" name="m1" power="50" poweredWheels="//@robots.1/@components.1 //@robots.1/@components.2"/>
+    <components xsi:type="robotdsl:Wheel" name="w1" motor="//@robots.1/@components.0"/>
+    <components xsi:type="robotdsl:Wheel" name="w2" motor="//@robots.1/@components.0"/>
+  </robots>
+</robotdsl:RobotSimulation>

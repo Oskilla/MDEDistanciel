@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="robotdsl" nsURI="http://www.example.org/robotdsl" nsPrefix="robotdsl">
+  <eClassifiers xsi:type="ecore:EClass" name="Robot" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="components" upperBound="-1"
+        eType="#//Component" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RobotProgram" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="commands" upperBound="-1"
+        eType="#//Command" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="robot" lowerBound="1" eType="#//Robot"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Component" abstract="true" eSuperTypes="#//NamedElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Light" eSuperTypes="#//Component"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Motor" eSuperTypes="#//Component">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="power" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="poweredWheels" upperBound="-1"
+        eType="#//Wheel" eOpposite="#//Wheel/motor"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RobotSimulation" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="robots" upperBound="-1"
+        eType="#//Robot" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="programs" upperBound="-1"
+        eType="#//RobotProgram" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Command" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SetLightColor" eSuperTypes="#//Command">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="light" lowerBound="1" eType="#//Light"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="color" lowerBound="1" eType="#//LightColor"
+        defaultValueLiteral="NONE"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MoveForward" eSuperTypes="#//Command">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="distance" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Rotate" eSuperTypes="#//Command">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="angle" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="LightColor">
+    <eLiterals name="GREEN"/>
+    <eLiterals name="RED" value="1"/>
+    <eLiterals name="BLUE" value="2"/>
+    <eLiterals name="YELLOW" value="3"/>
+    <eLiterals name="NONE" value="4"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NamedElement" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Wheel" eSuperTypes="#//Component">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="motor" eType="#//Motor"
+        eOpposite="#//Motor/poweredWheels"/>
+  </eClassifiers>
+</ecore:EPackage>
