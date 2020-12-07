@@ -2,8 +2,8 @@
 Nicolas HAWA, Gaël LODE
 jYht1yLht4pojje
 
-# TP Choisit
-Nous avons choisit de compléter le TP syntaxe graphique concrète. 
+# TP Choisi
+Nous avons choisi de compléter le TP syntaxe graphique concrète. 
 On a donc commencé par créer un nouveau _Viewpoint Specification Project_ 
 Dans le fichier .odesign, nous avons créé un nouveau _Diagram Description_
 Nous avons ensuite lié le diagrame au fichier .aird du TP 
@@ -15,7 +15,7 @@ Les éléments créé sont :
 	*Un Moteur qui est un carré bleu a l'intérieur du Robot
 
 Nous avons ensuite créé une palette d'outils appelée _Creation Robot_ dans laquel on retrouve tous les outils nécessaire pour créer un nouveau Robot
-Enfin nous avons cherché a afficher les noms des nouveaux éléments créés (à l'exception des Roues où on veut juste afficher un tooltip) en utilisant le cours et cette [documentation](https://www.eclipse.org/sirius/doc/specifier/general/Writing_Queries.html)
+Enfin nous avons cherché à afficher les noms des nouveaux éléments créés (à l'exception des Roues où on veut juste afficher un tooltip) en utilisant le cours et cette [documentation](https://www.eclipse.org/sirius/doc/specifier/general/Writing_Queries.html)
 
 # Problème rencontré 
-Nous ne sommes pas parvenu a afficher les noms (le tooltip marche bien) et on a décider de pas s'emmerder a regler ce problème alors qu'on a encore des projets a rendre et des partiels a préparer. 
+Nous ne sommes pas parvenu à afficher les noms (le tooltip marche bien), malgré nos recherches nous ne sommes pas parvenus à corriger ce problème. Ce probleme etant quelque chose de mineur, nous en avons conclus que les objectifs principaux du tp ont bien été réalisés.
